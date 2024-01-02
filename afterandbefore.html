@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+
+</head>
+<body>
+
+<div id="box" style="border: 2px solid black;">
+<h1>Hello</h1>
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur optio est esse aliquam laudantium unde ea minima ut fugiat eaque.</p>
+</div>
+
+<input type="button" value="After" id="after">
+<input type="button" value="Before" id="before">
+
+<script>
+
+$(document).ready(function(){
+$('#after').click(
+    function () {
+        $('#box').after('<h1> Hello </h1>', '<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur optio est esse aliquam laudantium unde ea minima ut fugiat eaque.</p>')
+    }
+)
+
+$('#before').click(
+    function () {
+        $('#box').before('<h1> Hello </h1>', '<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur optio est esse aliquam laudantium unde ea minima ut fugiat eaque.</p>')
+    }
+)
+})
+</script>
+    
+</body>
+</html>
